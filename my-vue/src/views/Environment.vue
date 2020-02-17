@@ -27,7 +27,7 @@
         <div data-spy="scroll" data-target="#navbar-example2" data-ofset="0">
           <h3 id="box-environment">当サイトの環境</h3>
           <h4 id="box-aws">AWS</h4>
-          <p class="subtext">内容(AWS):djangoでDBから引っ張ってくる</p><br><br>
+          <p class="subtext">サーバー類はAWSを使ってます。ec2 OS:Ubuntu Server</p><br><br>
           <h4 id="box-django">Django</h4>
           <p class="subtext">APIサーバーを書きました。REST APIでやり取りしています。</p><br><br>
           <h4 id="box-gunicorn">Gunicorn</h4>
