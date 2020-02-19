@@ -23,7 +23,7 @@ export default {
     };
   },
   created() {
-    axios.get("http://127.0.0.1:8000/content/api/").then(response => {
+    axios.get("http://mynfportfolio/content/api/").then(response => {
       this.getposts = response.data;
     });
   },

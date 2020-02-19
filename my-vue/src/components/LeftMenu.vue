@@ -50,7 +50,7 @@ export default {
       // axios.defaults.xsrfCookieName = 'csrftoken'
       // axios.defaults.xsrfHeaderName = "X-CSRFTOKEN"
       // Cookie.get('csrftoken')
-      axios.post("http://127.0.0.1:8000/content/api/", {
+      axios.post("http://mynfportfolio/content/api/", {
         csrfmiddlewaretoken: "rKaXTzGZZgaljl8WskI9tyTXI9niWLD8u011U73oFp9QcIQwzVYcZ3qco58lBa6N",
         name: this.name,
         comment: this.comment,
