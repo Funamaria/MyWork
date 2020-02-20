@@ -1,4 +1,4 @@
-"""mydjango URL Configuration
+"""mydjangoapi URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.0/topics/http/urls/
@@ -19,5 +19,5 @@ from django.conf.urls import include, url
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('content/', include('djangoapi.urls'))
+    path('content/', include('mydjango.urls')),
 ]
