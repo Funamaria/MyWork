@@ -47,11 +47,8 @@ export default {
   },
   methods: {
     sendContent() {
-      // axios.defaults.xsrfCookieName = 'csrftoken'
-      // axios.defaults.xsrfHeaderName = "X-CSRFTOKEN"
-      // Cookie.get('csrftoken')
-      axios.post("http://127.0.0.1:8000/content/api/", {
-        csrfmiddlewaretoken: "rKaXTzGZZgaljl8WskI9tyTXI9niWLD8u011U73oFp9QcIQwzVYcZ3qco58lBa6N",
+      axios.post("http://mynfportfolio.com/content/api/", {
+        headers:{'Content-Type':'appplication/json', 'Accept': 'application/json', 'Access-Control-Allow-Origin': '*'},
         name: this.name,
         comment: this.comment,
       });
