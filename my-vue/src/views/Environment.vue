@@ -42,6 +42,7 @@
           <h4 id="box-bootstrap">Bootstrap Bootstrap-vue</h4>
           <p class="subtext">ここに書くものでは無いかもしれませんが、デザインで多用したので入れておきました。</p><br><br>
     </div>
+    <b-img src="@/assets/aws.png" fluid alt="Responsive image"></b-img>
   </div>
 </template>
 
