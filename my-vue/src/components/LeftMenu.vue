@@ -47,8 +47,7 @@ export default {
   },
   methods: {
     sendContent() {
-      axios.post("http://mynfportfolio.com/content/api/", {
-        headers:{'Content-Type':'appplication/json', 'Accept': 'application/json', 'Access-Control-Allow-Origin': '*'},
+      axios.post("http://127.0.0.1:8000/content/api/", {
         name: this.name,
         comment: this.comment,
       });

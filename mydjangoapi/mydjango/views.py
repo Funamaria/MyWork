@@ -8,3 +8,7 @@ from .serializers import ContentSerializer
 class ContentInput(generics.ListCreateAPIView):
     queryset = Content.objects.all()
     serializer_class = ContentSerializer
+
+class GoodsGet(generics.ListAPIView):
+    queryset = Content.objects.all()
+    serializer_class = ContentSerializer

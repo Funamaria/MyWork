@@ -23,8 +23,7 @@ export default {
     };
   },
   created() {
-    axios.get("http://mynfportfolio.com/content/api/", {
-      headers: {'Content-Type':'appplication/json', 'Accept': 'application/json', 'Access-Control-Allow-Origin': '*'}}).then(response => {
+    axios.get("http://127.0.0.1:8000/content/api/").then(response => {
       this.getposts = response.data;
     });
   },

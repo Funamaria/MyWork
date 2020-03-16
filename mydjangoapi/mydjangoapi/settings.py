@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'ae6ktaj55=p$_lh)h41&(r+=#&milcxu5()+0q7bz#9i)5^a9#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -95,18 +95,23 @@ WSGI_APPLICATION = 'mydjangoapi.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.mysql',
+#        'NAME': 'django',
+#        'USER': 'django',
+#        'PASSWORD': 'django8286345',
+#       'HOST': '10.0.2.10',
+#        'PORT': '3306',
+#        'option': {
+#            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
+#    },
+#}
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'django',
-        'USER': 'django',
-        'PASSWORD': 'django8286345',
-        'HOST': '10.0.2.10',
-        'PORT': '3306',
-        'option': {
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
-        },
-    },
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
 }
 
 
@@ -147,3 +152,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
