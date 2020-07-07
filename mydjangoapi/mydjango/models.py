@@ -12,8 +12,6 @@ class Goods(models.Model):
     name = models.CharField(max_length=18)
     description = models.CharField(max_length=140)
     price = models.IntegerField()
-    category = models.CharField(max_length=20)
     image = models.URLField(default='')
-    url = models.URLField(default='')
     def __str__(self):
         return self.name

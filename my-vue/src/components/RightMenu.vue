@@ -1,7 +1,7 @@
 <template>
   <div>
     <div id="right-block">
-      <h3>投稿一覧</h3>
+      <h3>コメント一覧</h3>
       <div v-for="getpost in getposts" :key="getpost.name">
         <div id="nameandcomment">
           <div>名前:{{ getpost.name }}</div>
@@ -23,7 +23,7 @@ export default {
     };
   },
   created() {
-    axios.get("http://127.0.0.1:8000/content/api/").then(response => {
+    axios.get("api/content/").then(response => {
       this.getposts = response.data;
     });
   },

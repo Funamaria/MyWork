@@ -10,32 +10,11 @@
 </template>
 
 <script>
-import axios from "axios";
 export default {
   data(){
     return {
-      name: "",
-      comment: "",
-      private: ""
     }
   },
-  methods: {
-    getContent() {
-      axios.post('url', {
-        fields: {
-          name: {
-            stringValue:this.name
-          },
-          comment: {
-            stringValue: this.comment
-          },
-          private: {
-            boolean: this.private
-          }
-        }
-      })
-    }
-  }
 }
 </script>
 

@@ -2,7 +2,7 @@
   <div id="left">
     <div id="left-block">
       <form id="move-form">
-        <h4>入力フォーム</h4>
+        <h4>訪問コメント</h4>
         <div class="form-group">
           <label for="name">名前</label>
           <input
@@ -31,6 +31,7 @@
     </div>
   </div>
 </template>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
 
 <script>
 import axios from "axios";
@@ -40,17 +41,17 @@ export default {
     return {
       name: "",
       comment: "",
-      regi_date: "",
-      value: "",
-      csrftoken: "9JHYeQC6QTLMA72ZffOA9bpq1eqJ0rv6m65YkNgBl8g5hypIyHrTjpRYk56ku5tr"
-    };
+    }
   },
   methods: {
     sendContent() {
-      axios.post("http://127.0.0.1:8000/content/api/", {
+      var csrftoken = Cookies.get('csrftoken');
+      var headers = {'X-CSRFToken': csrftoken};
+
+      axios.post("api/content/", {
         name: this.name,
-        comment: this.comment,
-      });
+        comment: this.comment, 
+      }, {headers: headers});
       this.name = "";
       this.comment = "";
       location.reload();
