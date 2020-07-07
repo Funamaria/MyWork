@@ -9,4 +9,4 @@ class ContentSerializer(serializers.ModelSerializer):
 class GoodsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Goods
-        fields=('name','description','price','image')
+        fields=('name','description','date','icon')

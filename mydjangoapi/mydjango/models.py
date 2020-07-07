@@ -11,7 +11,7 @@ class Content(models.Model):
 class Goods(models.Model):
     name = models.CharField(max_length=18)
     description = models.CharField(max_length=140)
-    price = models.IntegerField()
-    image = models.URLField(default='')
+    date = models.DateTimeField(default=timezone.now)
+    icon = models.TextField(default="@/assets/cat.jpg")
     def __str__(self):
         return self.name
